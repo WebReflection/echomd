@@ -1,4 +1,4 @@
-# echomd
+# echomd [![build status](https://travis-ci.org/WebReflection/echomd.svg)](https://travis-ci.org/WebReflection/echomd)
 An md like conversion tool for shell terminals.
 
 Fully inspired by the work of John Gruber,
@@ -74,7 +74,7 @@ both bold and underline at once via `*_this_*` or `_*that*_`.
 Visible on Linux only, and just to preserve original MD intent,
 it is possible to strike text via one or more `~`.
 
-#### Bullets list [![build status](https://travis-ci.org/WebReflection/echomd.svg)](https://travis-ci.org/WebReflection/echomd)
+#### Bullets list
 It is possible to create a nice bullets list simply using 2 or more spaces or tabs.
 ```
 This is some text.
