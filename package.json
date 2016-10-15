@@ -1,0 +1,30 @@
+{
+  "name": "echomd",
+  "version": "0.1.0",
+  "description": "An md like conversion tool for shell terminals",
+  "bin": "js/echomd",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/echomd.git"
+  },
+  "keywords": [
+    "markdown",
+    "md",
+    "echo",
+    "shell",
+    "bash",
+    "terminal"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebReflection/echomd/issues"
+  },
+  "homepage": "https://github.com/WebReflection/echomd#readme"
+}

@@ -1,0 +1,16 @@
+
+[7m [1m# Bringing MD Like Syntax To Bash Shell[22m [27m
+It should be something as [1m*easy[22m*
+and as [4m_natural[24m_ as writing text.
+
+[7m [27m > Kepp It Simple
+
+Is the idea
+
+  •  * behind
+  •  * all this
+
+[9m~striking[29m~ UX for `shell` users too.
+- - -[1m────────────────────────────────────────────────────────────────────────[22m
+./echomd #green([32mv0.1.0[39m)
+
