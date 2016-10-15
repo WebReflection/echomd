@@ -102,6 +102,9 @@ The proposed syntax is pretty simple: `#green(text)` for text in green, and `!#g
 
 The list of currently supported colors (both text or background) is the same exposed through NodeJS `util/inspect.colors` module: _bold, italic, underline, inverse, white, grey, black, blue, cyan, green, magenta, red, yellow_.
 
+## As NodeJS moule
+The module can output directly in console or produce the raw text using `require('echomd').raw` function.
+
 ### License
 `echomd` is under the MIT style License (MIT).
 
