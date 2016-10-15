@@ -157,7 +157,7 @@ function demo() {
     ''
   ].join('\n'));
   output += '- - -' + echomd('- - -');
-  output += '\n./echomd #green(' + echomd('#green(v0.1.0)') + ')';
+  output += '\n./echomd #green(' + echomd('#green(v0.1.1)') + ')';
   console.log(output + '\n');
 }
 

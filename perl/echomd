@@ -212,7 +212,7 @@ Is the idea
 ~~~striking~~~ UX for `shell` users too.
 ");
   $output .= "- - -".echomd("- - -");
-  $output .= "\n./echomd #green(".echomd("#green(v0.1.0)").")";
+  $output .= "\n./echomd #green(".echomd("#green(v0.1.1)").")";
   print "$output\n\n";
 }
 
