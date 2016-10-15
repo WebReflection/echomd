@@ -6,9 +6,9 @@ Fully inspired by the work of John Gruber,
 that targets terminals and consoles.
 
 There are few inconsistencies across Windows, Mac, and Linux worlds,
-when it comes to highlight, underline, or emphasize text in console.
-
-`echomd` wants to make it as simple as possible to improve console layout.
+when it comes to highlight, underline, or emphasize text in console,
+and `echomd` is here to help and make it as simple as possible to improve
+console textual layout.
 
 ![echomd -h](test/echomd.png)
 
