@@ -10,6 +10,7 @@ when it comes to highlight, underline, or emphasize text in console.
 
 `echomd` wants to make it as simple as possible to improve console layout.
 
+![echomd -h](test/echomd.png)
 
 ### How to use it
 
