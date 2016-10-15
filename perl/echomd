@@ -43,7 +43,7 @@ sub echomd {
   my ($txt) = @_;
   my %code;
   # preserve code blocks
-  $txt =~ s{(`{3})(.+?)(?<!`)\1(?!`)}
+  $txt =~ s{(`{2,})(.+?)(?<!`)\1(?!`)}
            {$1.($code{$2}=md5_base64($2)).$1}egs;
   # preserve inline blocks too
   $txt =~ s{(`)(.+?)\1}{$1.($code{$2}=md5_base64($2)).$1}egm;

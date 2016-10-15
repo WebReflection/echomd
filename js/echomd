@@ -49,7 +49,7 @@ function echomd() {
   var
     txt = slice.apply(0, arguments).join(' '),
     code = new Dict(),
-    multiLineCode = /(^|[^\\])(`{3})([\s\S]+?)\2(?!`)/g,
+    multiLineCode = /(^|[^\\])(`{2,})([\s\S]+?)\2(?!`)/g,
     singleLineCode = /(^|[^\\])(`)(.+?)\2/gm,
     storeAndHide = function ($0, $1, $2, $3) {
       $3 = $3.replace(findDunder, md5Dunder);

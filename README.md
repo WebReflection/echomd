@@ -20,6 +20,10 @@ and executable.
 
 `npm install -g echomd` is basically all you need to start using it.
 
+Once installed, you can see a demo via `echomd -h` or `echomd --help`.
+Please note the demo has duplicated surrounding chars on purpose,
+so you can remember how to replicate a specific feature.
+
 
 ## Features
 
@@ -28,14 +32,14 @@ Following the list of transformers implemented via `echomd`.
 #### Code blocks
 Code blocks are simply **not parsed** and preserved as they are.
 These can be both multiline, via 3 backticks, or single line.
-```sh
-echomd 'Some text
-```
-multi *line*
-block
-```
-and `single _line_` too'
-```
+
+    echomd 'Some text
+    ```
+    multi *line*
+    block
+    ```
+    and `single _line_` too'
+
 
 #### Horizontal lines
 Using 3 or more `***` or `---` or `___`,
@@ -98,7 +102,8 @@ The proposed syntax is pretty simple: `#green(text)` for text in green, and `!#g
 
 The list of currently supported colors (both text or background) is the same exposed through NodeJS `util/inspect.colors` module: _bold, italic, underline, inverse, white, grey, black, blue, cyan, green, magenta, red, yellow_.
 
-
+### License
+`echomd` is under the MIT style License (MIT).
 
 
 
