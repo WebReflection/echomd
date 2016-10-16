@@ -19,13 +19,13 @@ virtually natively available in every Linux and Mac terminal,
 or the [nodejs version](js/echomd), usable both as module
 and executable.
 
-#### ArchLinux perl version via AUR
+#### ArchLinux perl version via [AUR](https://aur.archlinux.org/packages/echomd)
 `yaourt -S --noconfirm --needed echomd`
 
 #### Other Mac or Linux distributions (perl based)
 `curl -o- https://webreflection.github.io/echomd/install | bash`
 
-#### NodeJS version via npm
+#### NodeJS version via [npm](https://www.npmjs.com/package/echomd)
 `npm install -g echomd`
 
 Once installed, you can see a demo via `echomd -h` or `echomd --help`.
