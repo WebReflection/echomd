@@ -17,14 +17,15 @@ installFolder() {
 
 curl -LO https://webreflection.github.io/echomd/echomd/echomd.pl
 chmod a+x echomd.pl
+
 if [[ $USER =~ ^root|admin$ ]]; then
   mv echomd.pl "$(installFolder 'echomd')"
 else
   ./echomd.pl 'A *password* is *needed* to install echomd'
   sudo mv echomd.pl "$(installFolder 'echomd')"
 fi
+
 echomd "
 # Success
- echomd has been installed in:
- #green($(which echomd))
+ echomd has been #green(successfully) installed.
 "
