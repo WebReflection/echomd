@@ -26,6 +26,7 @@ and executable.
 `npm install -g echomd`
 
 #### Other Linux distributions
+`curl -o- https://webreflection.github.io/echomd/install | bash`
 
 
 Once installed, you can see a demo via `echomd -h` or `echomd --help`.
