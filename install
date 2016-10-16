@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Basic echomd CLI installer
+
+curl -LO https://webreflection.github.io/echomd/echomd/echomd.pl
+chmod a+x echomd.pl
+if [[ $USER =~ ^root|admin$ ]]; then
+  mv echomd.pl "$(which echo)md"
+else
+  sudo mv echomd.pl "$(which echo)md"
+fi
