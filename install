@@ -4,7 +4,7 @@
 
 installFolder() {
   local name=$1
-  if [[ uname =~ Darwin ]]; then
+  if [[ $(uname) =~ Darwin ]]; then
     if [ -d /usr/local/bin ]; then
       echo "/usr/local/bin/$name";
     else
