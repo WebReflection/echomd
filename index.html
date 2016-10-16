@@ -1,33 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <title>Echomd by WebReflection</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
+
+    <header>
+      <div class="container">
         <h1>Echomd</h1>
-        <p>A terminal oriented MD like syntax</p>
+        <h2>A terminal oriented MD like syntax</h2>
 
-        <p class="view"><a href="https://github.com/WebReflection/echomd">View the Project on GitHub <small>WebReflection/echomd</small></a></p>
+        <section id="downloads">
+          <a href="https://github.com/WebReflection/echomd/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/WebReflection/echomd/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/WebReflection/echomd" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
 
-
-        <ul>
-          <li><a href="https://github.com/WebReflection/echomd/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/WebReflection/echomd/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/WebReflection/echomd">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+    <div class="container">
+      <section id="main_content">
         <h1>
 <a id="echomd-" class="anchor" href="#echomd-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>echomd <a href="https://travis-ci.org/WebReflection/echomd"><img src="https://travis-ci.org/WebReflection/echomd.svg" alt="build status"></a>
 </h1>
@@ -43,17 +43,32 @@ when it comes to highlight, underline, or emphasize text in console,
 and <code>echomd</code> is here to help and make it as simple as possible to improve
 console textual layout.</p>
 
-<p><img src="test/echomd.png" alt="echomd -h"></p>
+<p><img src="https://webreflection.github.io/echomd/echomd.png" alt="echomd -h"></p>
 
 <h3>
-<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use it</h3>
+<a id="how-to-install-it" class="anchor" href="#how-to-install-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to install it</h3>
 
 <p>You can chose between the <a href="perl/echomd">perl version</a>,
 virtually natively available in every Linux and Mac terminal,
 or the <a href="js/echomd">nodejs version</a>, usable both as module
 and executable.</p>
 
-<p><code>npm install -g echomd</code> is basically all you need to start using it.</p>
+<h4>
+<a id="archlinux-perl-version-via-aur" class="anchor" href="#archlinux-perl-version-via-aur" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ArchLinux perl version via <a href="https://aur.archlinux.org/packages/echomd">AUR</a>
+</h4>
+
+<p><code>yaourt -S --noconfirm --needed echomd</code></p>
+
+<h4>
+<a id="other-mac-or-linux-distributions-perl-based" class="anchor" href="#other-mac-or-linux-distributions-perl-based" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other Mac or Linux distributions (perl based)</h4>
+
+<p><code>curl -o- https://webreflection.github.io/echomd/install | bash</code></p>
+
+<h4>
+<a id="nodejs-version-via-npm" class="anchor" href="#nodejs-version-via-npm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NodeJS version via <a href="https://www.npmjs.com/package/echomd">npm</a>
+</h4>
+
+<p><code>npm install -g echomd</code></p>
 
 <p>Once installed, you can see a demo via <code>echomd -h</code> or <code>echomd --help</code>.
 Please note the demo has duplicated surrounding chars on purpose,
@@ -166,12 +181,8 @@ yet it can have colors <strong>or</strong> background colors (not both together)
 
 <p><code>echomd</code> is under the MIT style License (MIT).</p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/WebReflection">WebReflection</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
   </body>
 </html>
