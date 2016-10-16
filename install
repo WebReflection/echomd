@@ -2,12 +2,26 @@
 
 # Basic echomd CLI installer
 
+installFolder() {
+  local name=$1
+  if [[ uname =~ Darwin ]]; then
+    if [ -d /usr/local/bin ]; then
+      echo "/usr/local/bin/$name";
+    else
+      echo "/usr/bin/$name";
+    fi
+  else
+    echo "$(dirname $(which echo))/$name";
+  fi
+}
+
 curl -LO https://webreflection.github.io/echomd/echomd/echomd.pl
 chmod a+x echomd.pl
 if [[ $USER =~ ^root|admin$ ]]; then
-  mv echomd.pl "$(which echo)md"
+  mv echomd.pl "$(installFolder 'echomd')"
 else
-  sudo mv echomd.pl "$(which echo)md"
+  ./echomd.pl 'A *password* is *needed* to install echomd'
+  sudo mv echomd.pl "$(installFolder 'echomd')"
 fi
 echomd "
 # Success
