@@ -12,7 +12,7 @@ console textual layout.
 
 ![echomd -h](test/echomd.png)
 
-### How to use it
+### How to install it
 
 You can chose between the [perl version](perl/echomd),
 virtually natively available in every Linux and Mac terminal,
