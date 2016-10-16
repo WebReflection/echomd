@@ -22,12 +22,11 @@ and executable.
 #### ArchLinux perl version via AUR
 `yaourt -S --noconfirm --needed echomd`
 
-#### npm install
-`npm install -g echomd`
-
-#### Other Linux distributions
+#### Other Linux distributions (perl based)
 `curl -o- https://webreflection.github.io/echomd/install | bash`
 
+#### NodeJS version via npm
+`npm install -g echomd`
 
 Once installed, you can see a demo via `echomd -h` or `echomd --help`.
 Please note the demo has duplicated surrounding chars on purpose,
