@@ -10,7 +10,7 @@ when it comes to highlight, underline, or emphasize text in console,
 and `echomd` is here to help and make it as simple as possible to improve
 console textual layout.
 
-![echomd -h](test/echomd.png)
+![echomd -h](//webreflection.github.io/echomd/echomd.png)
 
 ### How to install it
 
