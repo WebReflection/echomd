@@ -19,7 +19,14 @@ virtually natively available in every Linux and Mac terminal,
 or the [nodejs version](js/echomd), usable both as module
 and executable.
 
-`npm install -g echomd` is basically all you need to start using it.
+#### ArchLinux perl version via AUR
+`yaourt -S --noconfirm --needed echomd`
+
+#### npm install
+`npm install -g echomd`
+
+#### Other Linux distributions
+
 
 Once installed, you can see a demo via `echomd -h` or `echomd --help`.
 Please note the demo has duplicated surrounding chars on purpose,

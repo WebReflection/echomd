@@ -12,6 +12,7 @@ test:
 
 aur:
 	if [ -d "aur" ]; then rm -r aur; fi
+	make test
 	mkdir -p aur/echomd/echomd
 	cp perl/echomd aur/echomd/echomd/echomd.pl
 	sed -i "s/pkgver=[0-9.]*/pkgver=$(VERSION)/" PKGBUILD
@@ -33,6 +34,8 @@ aur:
 	git push
 	git checkout gh-pages
 	mkdir -p archive
+	if [ -d "echomd" ]; then rm -rf echomd; fi
+	tar -zxvf ~/code/aur/echomd/*.tar.*z
 	mv ~/code/aur/echomd/*.tar.*z archive/
 	mv ~/code/aur/echomd/version ./
 	git add .
