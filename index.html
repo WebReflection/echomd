@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Echomd by WebReflection</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Echomd</h1>
+        <p>A terminal oriented MD like syntax</p>
+
+        <p class="view"><a href="https://github.com/WebReflection/echomd">View the Project on GitHub <small>WebReflection/echomd</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/WebReflection/echomd/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/WebReflection/echomd/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/WebReflection/echomd">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="echomd-" class="anchor" href="#echomd-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>echomd <a href="https://travis-ci.org/WebReflection/echomd"><img src="https://travis-ci.org/WebReflection/echomd.svg" alt="build status"></a>
+</h1>
+
+<p>An md like conversion tool for shell terminals.</p>
+
+<p>Fully inspired by the work of John Gruber,
+<code>echomd</code> is a <a href="http://daringfireball.net/projects/markdown/">Markdown</a> flavor
+that targets terminals and consoles.</p>
+
+<p>There are few inconsistencies across Windows, Mac, and Linux worlds,
+when it comes to highlight, underline, or emphasize text in console,
+and <code>echomd</code> is here to help and make it as simple as possible to improve
+console textual layout.</p>
+
+<p><img src="test/echomd.png" alt="echomd -h"></p>
+
+<h3>
+<a id="how-to-use-it" class="anchor" href="#how-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use it</h3>
+
+<p>You can chose between the <a href="perl/echomd">perl version</a>,
+virtually natively available in every Linux and Mac terminal,
+or the <a href="js/echomd">nodejs version</a>, usable both as module
+and executable.</p>
+
+<p><code>npm install -g echomd</code> is basically all you need to start using it.</p>
+
+<p>Once installed, you can see a demo via <code>echomd -h</code> or <code>echomd --help</code>.
+Please note the demo has duplicated surrounding chars on purpose,
+so you can remember how to replicate a specific feature.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<p>Following the list of transformers implemented via <code>echomd</code>.</p>
+
+<h4>
+<a id="code-blocks" class="anchor" href="#code-blocks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code blocks</h4>
+
+<p>Code blocks are simply <strong>not parsed</strong> and preserved as they are.
+These can be both multiline, via 3 backticks, or single line.</p>
+
+<pre><code>echomd 'Some text
+```
+multi *line*
+block
+```
+and `single _line_` too'
+</code></pre>
+
+<h4>
+<a id="horizontal-lines" class="anchor" href="#horizontal-lines" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Horizontal lines</h4>
+
+<p>Using 3 or more <code>***</code> or <code>---</code> or <code>___</code>,
+with optional spaces in between,
+produces a 72 length straight line,
+simulating somehow a browser <code>&lt;hr&gt;</code></p>
+
+<h4>
+<a id="headers" class="anchor" href="#headers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Headers</h4>
+
+<p>There are two kind of headers, the most important one,
+defined using only <strong>one</strong> <code># Hashtag</code>,
+which is a fully highlighted and bold header,
+or two or more <code>## Hashtags</code> for less important headers,
+still highlighted compared to the rest of the text.</p>
+
+<h4>
+<a id="bold" class="anchor" href="#bold" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bold</h4>
+
+<p>Using one or two asterisks would produce some bold text.
+<code>*this*</code> or <code>**this**</code> will produce identical text,
+preserving the semantic original meaning of the <code>*</code>,
+showing up consistently bold in every platform.</p>
+
+<p>The reason one star does not produce <code>&lt;em&gt;</code> tag equivalent,
+is that italic text is unfortunately not widely supported (Linux only)
+so it'd be bad UX for cross platform users if completely unrecognizable elsewhere.</p>
+
+<h4>
+<a id="underline" class="anchor" href="#underline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Underline</h4>
+
+<p>Following same cross platform consistency reason,
+using one or more underscores will produce an underlined text.
+<code>_this_</code> and <code>__this__</code>are equivalent, and it's possible combine
+both bold and underline at once via <code>*_this_*</code> or <code>_*that*_</code>.</p>
+
+<h4>
+<a id="strike" class="anchor" href="#strike" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Strike</h4>
+
+<p>Visible on Linux only, and just to preserve original MD intent,
+it is possible to strike text via one or more <code>~</code>.</p>
+
+<h4>
+<a id="bullets-list" class="anchor" href="#bullets-list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bullets list</h4>
+
+<p>It is possible to create a nice bullets list simply using 2 or more spaces or tabs.</p>
+
+<pre><code>This is some text.
+  * this is a bullet
+  * this is another one
+    that will preserve spaces
+    to it's possible to go new line
+  * this is the last bullet
+And this is some text.
+</code></pre>
+
+<p>Bear in mind, nested lists and all possible complicated and uncommon Web related scenarios are not supported. Keep It Simple (and handy) is the root of this project.</p>
+
+<h4>
+<a id="quotes" class="anchor" href="#quotes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quotes</h4>
+
+<p>It is possible to quote some text simply starting a line with <code>&gt;</code>.</p>
+
+<pre><code>This is some text from somebody else.
+&gt; brace yourselves, echomd is coming
+</code></pre>
+
+<h4>
+<a id="colors-and-background-colors" class="anchor" href="#colors-and-background-colors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Colors and Background Colors</h4>
+
+<p>Software designed for the terminal cannot go too fancy with tags or styles,
+yet it can have colors <strong>or</strong> background colors (not both together).</p>
+
+<p>The proposed syntax is pretty simple: <code>#green(text)</code> for text in green, and <code>!#green(text)</code> for text with a green background.</p>
+
+<p>The list of currently supported colors (both text or background) is the same exposed through NodeJS <code>util/inspect.colors</code> module: <em>bold, italic, underline, inverse, white, grey, black, blue, cyan, green, magenta, red, yellow</em>.</p>
+
+<h2>
+<a id="as-nodejs-moule" class="anchor" href="#as-nodejs-moule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>As NodeJS moule</h2>
+
+<p>The module can output directly in console or produce the raw text using <code>require('echomd').raw</code> function.</p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p><code>echomd</code> is under the MIT style License (MIT).</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/WebReflection">WebReflection</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
