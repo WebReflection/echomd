@@ -13,7 +13,7 @@ test:
 aur:
 	if [ -d "aur" ]; then rm -r aur; fi
 	mkdir -p aur/echomd/echomd
-	cp perl/echomd aur/echomd/echomd/echomd
+	cp perl/echomd aur/echomd/echomd/echomd.pl
 	sed -i "s/pkgver=[0-9.]*/pkgver=$(VERSION)/" PKGBUILD
 	sync
 	tar -zcvf echomd-$(VERSION).tar.gz -C aur/echomd echomd
