@@ -22,7 +22,7 @@ and executable.
 #### ArchLinux perl version via AUR
 `yaourt -S --noconfirm --needed echomd`
 
-#### Other Linux distributions (perl based)
+#### Other Mac or Linux distributions (perl based)
 `curl -o- https://webreflection.github.io/echomd/install | bash`
 
 #### NodeJS version via npm
