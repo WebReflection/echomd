@@ -2,7 +2,7 @@
 
 # Basic echomd CLI installer
 
-installFolder() {
+executablePath() {
   local name=$1
   if [[ $(uname) =~ Darwin ]]; then
     if [ -d /usr/local/bin ]; then
@@ -19,10 +19,10 @@ curl -LO https://webreflection.github.io/echomd/echomd/echomd.pl
 chmod a+x echomd.pl
 
 if [[ $USER =~ ^root|admin$ ]]; then
-  mv echomd.pl "$(installFolder 'echomd')"
+  mv echomd.pl "$(executablePath 'echomd')"
 else
   ./echomd.pl 'A *password* is *needed* to install echomd'
-  sudo mv echomd.pl "$(installFolder 'echomd')"
+  sudo mv echomd.pl "$(executablePath 'echomd')"
 fi
 
 echomd "
