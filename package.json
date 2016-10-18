@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "An md like conversion tool for shell terminals",
   "bin": "js/echomd",
+  "main": "js/echomd",
   "directories": {
     "test": "test"
   },

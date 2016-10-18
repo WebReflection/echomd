@@ -1,7 +1,7 @@
 # Maintainer: Andrea Giammarchi <andrea.giammarchi@gmail.com>
 pkgname=echomd
 pkgrel=1
-pkgver=0.1.1
+pkgver=0.1.2
 pkgdesc="A markdown like conversion tool for shell terminals."
 arch=('any')
 url="https://github.com/WebReflection/echomd"
