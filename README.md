@@ -1,6 +1,8 @@
 # echomd [![build status](https://travis-ci.org/WebReflection/echomd.svg)](https://travis-ci.org/WebReflection/echomd)
 An md like conversion tool for shell terminals.
 
+<sub>Would you like to try Markdown for browser console? Check [consolemd](https://github.com/WebReflection/consolemd#consolemd-) out</sub>
+
 Fully inspired by the work of John Gruber,
 `echomd` is a [Markdown](http://daringfireball.net/projects/markdown/) flavor
 that targets terminals and consoles.
