@@ -6,3 +6,4 @@ archive
 aur
 .SRCINFO
 .travis.yml
+package-lock.json

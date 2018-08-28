@@ -1,7 +1,7 @@
 
 [7m [1m# Bringing MD Like Syntax To Bash Shell[22m [27m
-It should be something as [1m*easy[22m*
-and as [4m_natural[24m_ as writing text.
+It should be something as [1m* easy *[22m
+and as [4m_ natural _[24m as writing text.
 
 [7m [27m > Kepp It Simple
 
@@ -10,7 +10,8 @@ Is the idea
   •  * behind
   •  * all this
 
-[9m~striking[29m~ UX for `shell` users too.
+[9m~ striking ~[29m UX also for `shell` users.
+[2m- dimmed -[22m, [7m! inverted ![27m, or [5m: blinking :[25m too!
 - - -[1m────────────────────────────────────────────────────────────────────────[22m
 ./echomd #green([32mv0.1.2[39m)
 

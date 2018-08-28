@@ -31,7 +31,10 @@
 */
 
 var
+  DIM_START = 2,
+  DIM_END = 22,
   crypto = require('crypto'),
+  os = require('os'),
   line = Array(73).join('─'),
   some = [].some || function (cb) {
     for (var i = 0; i < this.length; i++) {
@@ -44,6 +47,13 @@ var
   findDunder = /^__proto__$/,
   restoreDunder = new RegExp('^' + md5Dunder + '$')
 ;
+
+try {
+  if (/\bMicrosoft\b/.test(os.release()) || os.platform() === 'win32') {
+    DIM_START = 90;
+    DIM_END = 37;
+  }
+} catch(meh) {}
 
 function echomd() {
   var
@@ -67,9 +77,16 @@ function echomd() {
                     '\x1B[1m' + line + '\x1B[22m');
   // header
   txt = txt.replace(/^(\#{1,6})[ \t]+(.+?)[ \t]*\#*([\r\n]+|$)/gm, getHeader);
-  // bold underline strike
+  // bold dim underline blink reverse hidden strike
   txt = txt.replace(/(\*{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[1m$2$3\x1B[22m');
+  txt = txt.replace(
+    /(-{1,2})(?=\S)(.*?)(\S)\1/g,
+    '\x1B[' + DIM_START + 'm$2$3\x1B[' + DIM_END + 'm'
+  );
   txt = txt.replace(/(_{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[4m$2$3\x1B[24m');
+  txt = txt.replace(/(\:{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[5m$2$3\x1B[25m');
+  txt = txt.replace(/(\!{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[7m$2$3\x1B[27m');
+  txt = txt.replace(/(\?{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[8m$2$3\x1B[28m');
   txt = txt.replace(/(~{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[9m$2$3\x1B[29m');
   // list
   txt = txt.replace(/^([ \t]{2,})[*+-]([ \t]{1,})/gm, '$1•$2');
@@ -143,8 +160,8 @@ function demo() {
   var output = echomd([
     '',
     '# # Bringing MD Like Syntax To Bash Shell',
-    'It should be something as ***easy***',
-    'and as ___natural___ as writing text.',
+    'It should be something as *** easy ***',
+    'and as ___ natural ___ as writing text.',
     '',
     '> > Kepp It Simple',
     '',
@@ -153,7 +170,8 @@ function demo() {
     '  *  * behind',
     '  *  * all this',
     '',
-    '~~~striking~~~ UX for `shell` users too.',
+    '~~~ striking ~~~ UX also for `shell` users.',
+    '--- dimmed ---, !!! inverted !!!, or ::: blinking ::: too!',
     ''
   ].join('\n'));
   output += '- - -' + echomd('- - -');

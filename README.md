@@ -74,11 +74,23 @@ The reason one star does not produce `<em>` tag equivalent,
 is that italic text is unfortunately not widely supported (Linux only)
 so it'd be bad UX for cross platform users if completely unrecognizable elsewhere.
 
+#### Dim
+A meaningful, cross platform, way to dim some text via one or more `-`.
+
 #### Underline
 Following same cross platform consistency reason,
 using one or more underscores will produce an underlined text.
 `_this_` and `__this__`are equivalent, and it's possible combine
 both bold and underline at once via `*_this_*` or `_*that*_`.
+
+#### Blink
+Visible on Linux and macOS only, it is possible to blink text via one or more `:`.
+
+#### Reverse
+A meaningful, cross platform, way to reverse some text via one or more `!`.
+
+#### Hidden
+A way to hide text via `?`.
 
 #### Strike
 Visible on Linux only, and just to preserve original MD intent,
