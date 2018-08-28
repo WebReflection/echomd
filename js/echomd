@@ -89,7 +89,7 @@ function echomd() {
   txt = txt.replace(/(\?{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[8m$2$3\x1B[28m');
   txt = txt.replace(/(~{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[9m$2$3\x1B[29m');
   // list
-  txt = txt.replace(/^([ \t]{2,})[*+-]([ \t]{1,})/gm, '$1•$2');
+  txt = txt.replace(/^([ \t]{1,})[*+-]([ \t]{1,})/gm, '$1•$2');
   // quote
   txt = txt.replace(/^[ \t]*>([ \t]?)/gm, '\x1B[7m$1\x1B[27m$1');
   // color

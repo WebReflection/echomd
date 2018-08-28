@@ -112,7 +112,7 @@ sub _horizontal {
 #   * list 3
 sub _list {
   my ($txt) = @_;
-  $txt =~ s/^([ \t]{2,})[*+-]([ \t]{1,})/$1•$2/gm;
+  $txt =~ s/^([ \t]{1,})[*+-]([ \t]{1,})/$1•$2/gm;
   return $txt;
 }
 
