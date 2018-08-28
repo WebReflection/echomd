@@ -1,6 +1,6 @@
 {
   "name": "echomd",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "An md like conversion tool for shell terminals",
   "bin": "js/echomd",
   "main": "js/echomd",
