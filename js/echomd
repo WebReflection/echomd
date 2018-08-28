@@ -84,7 +84,14 @@ function echomd() {
     '\x1B[' + DIM_START + 'm$2$3\x1B[' + DIM_END + 'm'
   );
   txt = txt.replace(/(_{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[4m$2$3\x1B[24m');
-  txt = txt.replace(/(\:{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[5m$2$3\x1B[25m');
+  txt = txt.replace(
+    /(\:{1,2})(?=\S)(.*?)(\S)\1/g,
+    function ($0, $1, $2, $3) {
+      return DIM_START === 2 ?
+              ('\x1B[5m' + $2 + $3 + '\x1B[25m') :
+              ('\x1B[7m' + $2 + $3 + '\x1B[27m')
+    }
+  );
   txt = txt.replace(/(\!{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[7m$2$3\x1B[27m');
   txt = txt.replace(/(\?{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[8m$2$3\x1B[28m');
   txt = txt.replace(/(~{1,2})(?=\S)(.*?)(\S)\1/g, '\x1B[9m$2$3\x1B[29m');

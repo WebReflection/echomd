@@ -90,14 +90,14 @@ Visible on Linux and macOS only, it is possible to blink text via one or more `:
 A meaningful, cross platform, way to reverse some text via one or more `!`.
 
 #### Hidden
-A way to hide text via `?`.
+A way to hide text via `?`, o Mac and Linux only.
 
 #### Strike
 Visible on Linux only, and just to preserve original MD intent,
 it is possible to strike text via one or more `~`.
 
 #### Bullets list
-It is possible to create a nice bullets list simply using 2 or more spaces or tabs.
+It is possible to create a nice bullets list simply using 1 or more spaces / tabs.
 ```
 This is some text.
   * this is a bullet
@@ -107,7 +107,7 @@ This is some text.
   * this is the last bullet
 And this is some text.
 ```
-Bear in mind, nested lists and all possible complicated and uncommon Web related scenarios are not supported. Keep It Simple (and handy) is the root of this project.
+Bear in mind, nested lists and all possible complicated and uncommon Web related scenarios are not supported. Keep It Simple (and handy) is the root idea of this project.
 
 #### Quotes
 It is possible to quote some text simply starting a line with `> `.
